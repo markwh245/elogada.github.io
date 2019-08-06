@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /static/*
+Disallow: /favicon.ico
+Disallow: /cgi-bin/*.cgi
+Disallow: /cgi-bin/*.pl
+Allow: /index.html
+Allow: /contactus.html
+Allow: /xsspayloads.html
+Allow: /sqlipayloads.html
